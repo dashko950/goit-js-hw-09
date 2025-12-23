@@ -16,3 +16,7 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+/* Homework 9 tasks */
+@import url('./1-gallery.css'); /* Стилі галереї */
+@import url('./2-form.css'); /* Стилі форми */

@@ -1,0 +1,169 @@
+/* Feedback Form Styles for Homework 9 */
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  text-align: left;
+}
+
+/* Labels */
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+/* ===== EMAIL FIELD (with "Type area") ===== */
+.feedback-form input[type='email'] {
+  /* Normal State */
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  background-color: #fff;
+  font-family: inherit;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover State */
+.feedback-form input[type='email']:hover {
+  border-color: #000000;
+}
+
+/* Active/Focus State */
+.feedback-form input[type='email']:focus {
+  border-color: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== TEXTAREA FIELD (NO placeholder) ===== */
+.feedback-form textarea {
+  /* Normal State */
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  background-color: #fff;
+  font-family: inherit;
+  outline: none;
+  resize: vertical;
+  min-height: 120px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover State */
+.feedback-form textarea:hover {
+  border-color: #000000;
+}
+
+/* Active/Focus State */
+.feedback-form textarea:focus {
+  border-color: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== PLACEHOLDER STYLES (ONLY for email) ===== */
+/* "Type area" text - light gray ONLY in email field */
+.feedback-form input[type='email']::placeholder {
+  color: #9e9e9e; /* Light gray for "Type area" */
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  opacity: 1;
+}
+
+/* Placeholder when email field is focused */
+.feedback-form input[type='email']:focus::placeholder {
+  color: #757575; /* Slightly darker gray when focused */
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.feedback-form button {
+  /* Normal State */
+  align-self: flex-start;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4E75FF;
+;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 8px;
+}
+
+/* Hover State */
+.feedback-form button:hover {
+  background-color: #6C8CFF;
+;
+}
+
+/* Active State */
+.feedback-form button:active {
+  background-color: #3a5bcc;
+}
+
+/* ===== ADAPTIVE ===== */
+/* Mobile */
+@media (max-width: 767px) {
+  .feedback-form {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .feedback-form button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .feedback-form {
+    max-width: 600px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+  .feedback-form {
+    max-width: 480px;
+  }
+}
+
+/* Fix for GoIT template centering */
+main:has(.back-link) .feedback-form,
+main:has(.back-link) .feedback-form label,
+main:has(.back-link) .feedback-form input,
+main:has(.back-link) .feedback-form textarea {
+  text-align: left !important;
+}
